@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": null,
+  "outputDirectory": "build",
+  "env": {
+    "SHOPIFY_API_KEY": "4bbb4f9ab10c912265249eb8adac437f",
+    "SCOPES": "write_products"
+  }
+} 

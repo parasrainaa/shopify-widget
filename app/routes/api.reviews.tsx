@@ -7,7 +7,9 @@ import { v4 as uuidv4 } from "uuid";
 
 // Helper function to get shop-specific reviews file path
 function getReviewsPath(shop: string) {
-  return path.join(process.cwd(), "data", `${shop}-reviews.json`);
+  // Use /tmp directory in production (Vercel), data directory in development
+  const baseDir = process.env.VERCEL ? '/tmp' : process.cwd();
+  return path.join(baseDir, "data", `${shop}-reviews.json`);
 }
 
 // Helper function to read reviews
